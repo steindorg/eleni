@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block all_projects %}
+<link href="/static/css/nav_bar_eleni.css" rel="stylesheet" media="screen">
+	{% for item in projects %}
+			<div class="content">
+				
+				
+				<img class="img" alt="{{ item.title }}" src="{{ item.photos.first.photo_thumbnail.url }}"/>
+				
+
+			</div>
+	
+
+
+	{% endfor %}
+			
+{% endblock %}

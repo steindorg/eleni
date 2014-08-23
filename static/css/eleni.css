@@ -1,0 +1,171 @@
+
+/*giving the body a width*/
+body{
+	width: 100%;
+  	max-width: 960px;
+  	margin: 0 auto; }
+}
+
+
+/* xxxxxxxxxxxxxxxxxxx   xx     Nav bar     xx     xxxxxxxxxxxxxx*/
+
+/* Make the nav take up the whole body width, and give it some top and bottom margin space */
+.nav_div{
+	width:100%;
+	margin:50px 0;
+	position: fixed;
+
+}
+
+.nav_div ul{
+	/*background-color: #C0C6D0;*/ 
+	width: 100%; 
+	list-style: none;
+	margin:6px 0;
+	padding: 0;
+	border-bottom: 1px dotted black;
+}
+
+.nav_div ul li {
+/*
+There are 8 navigation links, so they each need to take up  1/8 of the total nav bar width. This means each <li> should be 20% wide, 
+and the anchors inside of them should take up 100% of the <li>. 
+*/	
+	width: 8.5%;
+	/*To make them appear in a horizontal row, use float.*/
+	margin: 1px 20px -3px 30px;
+	display:inline-block;
+}
+
+.nav_div ul li a{
+	text-align: center;
+	display:block;
+	width:100%;
+	text-decoration: none;
+	color: black;
+}
+
+.nav_div #elenipro{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 47px;
+	font-size: 40px;
+	text-decoration: none;
+	color: black;
+}
+
+.nav_div ul li a:hover{
+	color: grey;
+}
+
+/* xxxxxxxxxxxxxxxxxxx   xx    main content    xx	  xxxxxxxxxxxxxx*/
+
+/*  fyrir lista af myndum sem syna theatre project    */
+.content{
+	/*margin-top: 100px;
+	margin-left: 120px;
+	display: inline-block;
+	/*vertical-align: top;
+	position: inherit; */
+}
+.content h3 a {
+	height: 100px; 
+	width: 200px; 
+	overflow: hidden;
+}
+/*fadein text */
+.h3 {
+	margin-top: 110px;
+	margin-left: 50px;
+	position: absolute; 
+   	font-size: 40px;
+   	color: solid black;
+   	/*background: rgb(0, 0, 0); /* fallback color 
+   	background: rgba(0, 0, 0, 0.7);*/
+   	display: none;
+}
+.contenttitle{
+	margin-top: 50px;
+	margin-left: 11px;
+	display: inline-block;
+}
+.img{
+	height:100px
+    width:auto;/*maintain aspect ratio*/
+    max-width:400px;
+    /*z-index: -1;*/
+}
+
+.highlight{
+	z-index: -1;
+	height:70px
+    width:auto;/*maintain aspect ratio*/
+    max-width:200px;
+    filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: blur(50px);
+	filter: gray;
+	-webkit-filter: grayscale(1) blur(1px);
+}
+
+#introtext{
+	display: inline-block;
+	position: absolute;
+	top: 160px;
+	left: 105px;
+}
+
+.hide{display: none;}
+
+/*xxxxxxxxxxxxxxxxxxx About html  xxxxxxxxxxxxxxxx*/
+#text{
+	font-size: 14px;	
+	margin-top: -468px;
+    margin-bottom: 0px;
+    margin-right: 575px;
+    margin-left: 0px;
+	float: left;
+
+}
+
+#about_img{
+	float:right;
+}
+/*xxxxxxxxxxxxxxxxxxx links html  xxxxxxxxxxxxxxxx*/
+#link_content{
+	display:block;
+	text-align:center;
+	margin-top: 80px;
+}
+#link{
+	display:block;
+	margin-top: 30px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+#link_content a{
+	text-decoration: none;
+	color:black;
+}
+
+#link_content a:hover {
+	color: grey;
+	text-decoration: underline;
+}
+/*xxxxxxxxxxxxxxxxxxx Contact html xxxxxxxxxxxxxxxx*/
+#contact_info{
+	text-align:center;	
+	margin-top: 80px;
+}
+
+
+
+
+
+
+
+

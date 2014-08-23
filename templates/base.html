@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	<head>	
+		<title>Eleni_Podara</title>
+		<meta charset="UTF-8">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+	    <link href="/static/css/eleni.css" rel="stylesheet" media="screen">
+		<!--<link rel="SHORTCUT ICON" href="favicon.ico" type="image/x-icon" />-->
+		<!--<link rel="ICON" href="favicon.ico" type="image/ico" />-->
+		<script src='/static/js/jquery-1.11.1.js' type="text/javascript"></script>
+		<!--<script src='/static/js/eleni.js' type="text/javascript"/></script>-->
+	</head>
+
+	<body>
+			<!--nav var med class mainp en nu ekkert-->
+			
+			<div class="nav_div">
+				<a class="home" id="elenipro" href="/home">Eleni Podara</a>
+				<ul>
+					
+					<li id= "theatreid"> <a class="navlink" id="theatrepro" href="/theatre"> Theatre </a> </li>
+					<li> <a class="navlink" id="filmpro" href="/film"> Film </a> </li>
+					<li> <a class="navlink" id="tvpro" href="/tv"> Tv </a> </li>
+					<li> <a class="navlink" id="variouspro" href="/various"> Various </a> </li>
+					<li> <a class="navlink" id="aboutpro" href="/about"> About </a> </li>
+					<li> <a class="navlink" id="contactpro" href="/contact"> Contact </a> </li>
+					<li> <a class="navlink" id="linkspro" href="/links"> Links </a> </li>
+				</ul>
+			
+			</div>
+
+			<div id="main_cat">
+				
+				<div>{% block all_projects %} {% endblock %}</div>
+
+				<div>{% block project %} {% endblock %}</div>
+				
+				<div>{% block project_details %} {% endblock %}</div>
+
+				<div>{% block contact %} {% endblock %}</div>
+				
+				<div>{% block thanks %} {% endblock %}</div>
+
+				<div>{% block about %} {% endblock %}</div>
+			
+				<div>{% block links %} {% endblock %}</div>
+
+			</div>
+	</body>
+
+<script src='/static/js/eleni.js' type="text/javascript"/></script>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block links %}
+	<link href="/static/css/nav_bar_links.css" rel="stylesheet" media="screen">
+	<div id="link_content">	
+		{% for item in links %}
+			<div id="link">
+				
+				<a href="{{item.url }}" target=_blank>{{ item.description }}</a>
+				
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

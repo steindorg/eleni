@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load embed_video_tags %}
+
+
+{% block project_details %}
+	<div class="content">
+		
+		<!-- text and video block -->
+		<div>
+			<div style="margin-top: 100px;"> 
+				<h2>{{tproject_details.title}}</h2> 
+					{{project_details.text}} 
+			<div>
+
+			
+			<div style="position: static; margin-top: 100px;">
+				{%  for x in project_details.videos.all  %}
+	
+					{% video x.video "medium" %}
+					
+				{% endfor %}		
+
+			</div>
+		</div>	
+		<!-- end text and video block -->
+
+
+
+		<!-- image block -->
+			<div style="position: static; margin-top: 100px;">
+				
+				{% for p in project_details.photos.all %}
+					<img class="img" alt="{{ p.title }}" src="{{ p.photo.url }}"/>
+				{% endfor %}
+
+			
+
+			</div>
+		<!-- end image block -->
+	
+	</div>
+
+{% endblock %}
+

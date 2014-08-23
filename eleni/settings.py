@@ -10,8 +10,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import django
+# SETTINGS_DIR                              POINTS TO WHERE SETTINGS.PY IS 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
+#DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
+#SITE_ROOT = os.path.dirname(os.path.realpath('__file__'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -36,6 +39,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'eleni_app',
+    'south',
+    'django_extensions',
+    'rest_framework',
+    'imagekit',
+    'embed_video',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -45,6 +54,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth' 
+
 )
 
 ROOT_URLCONF = 'eleni.urls'
@@ -62,6 +78,8 @@ DATABASES = {
     }
 }
 
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -76,7 +94,27 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 STATIC_URL = '/static/'
+
+    
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static/'),
+)
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates/')
+)
+
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block project %}
+	{% if project.first.project_type == "Theatre" %}
+				<link href="/static/css/nav_bar_theatre.css" rel="stylesheet" media="screen">
+					
+	{% elif project.first.project_type == "Film" or project == "film" %}
+				<link href="/static/css/nav_bar_film.css" rel="stylesheet" media="screen">
+				
+	{% elif project.first.project_type == "Tv" or project == "tv" %}
+				<link href="/static/css/nav_bar_tv.css" rel="stylesheet" media="screen">
+				<p class="content"> this is going to the if sentence </p>
+	{% elif project.first.project_type == "Various" or project == "various" %}
+				<link href="/static/css/nav_bar_various.css" rel="stylesheet" media="screen">
+	{% elif project.first.project_type == "Various" %}
+				<link href="/static/css/nav_bar_various.css" rel="stylesheet" media="screen">
+	{%  else %}
+
+
+	{% endif %}	
+	
+	{% if   project == "theatre" or project == "film"  or project == "tv" or project == "various" %}
+			
+	{%  else %}
+		{% for item in project %}
+				<div class="content">
+				
+
+
+
+					<h3 class="h3"> {{ item.title }} </h3>
+						<a 	id="single_pro" 
+							href="/{{project.first}}/{{item.id}}">
+							<img class="img" alt="{{ item.title }}" src="{{item.photos.first.photo_thumbnail.url}}"  title="{{photo.title}}"/>
+						</a> 
+
+				</div>
+		{% endfor %}
+	{% endif %}
+{% endblock %}

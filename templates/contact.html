@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block contact %}
+<link href="/static/css/nav_bar_contact.css" rel="stylesheet" media="screen">
+    <div class="content">
+      
+
+      <!--<h2>Contact Form</h2>
+      <p>To send me a message fill out the below form.</p>
+  
+            
+            {% if form.errors %}
+                <p style="color: red;">Please correct the error{{ form.errors|pluralize }} below.</p>
+            {% endif %}
+
+
+
+            <form action="" method="post" id="contactform">{% csrf_token %}
+                <div id="ajaxwrapper">
+                
+               
+                <table>
+
+                {{ form.as_table }}
+                </table>
+                <p id="sendwrapper"><input type="submit" value="Send" id="sendbutton"/></p>
+                </div>
+            </form>
+        -->
+        <div id="contact_info">
+            <h2>Contact info</h2>
+            <p>{{ contact.email}}</p>
+            <p>{{ contact.phone}}</p>        
+       
+            <p>{{ contact.additional_1 }}</p>
+            <p>{{ contact.additional_2 }}</p>
+        </div>
+
+
+    </div>
+
+{% endblock %}
