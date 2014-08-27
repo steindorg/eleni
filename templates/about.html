@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+
 {% block about %}
 <link href="/static/css/nav_bar_about.css" rel="stylesheet" media="screen">
-
-
- <div class="content">
-  	<h2>Eleni Podara (Ελένη Ποδάρα)</3>
+<div class="content" id="about_container">
+  	<h2 id="about_h2_text">Eleni Podara (Ελένη Ποδάρα)</h2>
   	<img id="about_img"  src="{{ about.about_photo_thumbnail.url }}"/>
 
   	

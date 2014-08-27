@@ -3,18 +3,13 @@
 
 
 {% block project %}
-	{% if project.first.project_type == "Theatre" %}
+	{% if project.first.project_type == "Theatre" or project == "theatre"%}
 				<link href="/static/css/nav_bar_theatre.css" rel="stylesheet" media="screen">
-					
 	{% elif project.first.project_type == "Film" or project == "film" %}
 				<link href="/static/css/nav_bar_film.css" rel="stylesheet" media="screen">
-				
 	{% elif project.first.project_type == "Tv" or project == "tv" %}
 				<link href="/static/css/nav_bar_tv.css" rel="stylesheet" media="screen">
-				<p class="content"> this is going to the if sentence </p>
 	{% elif project.first.project_type == "Various" or project == "various" %}
-				<link href="/static/css/nav_bar_various.css" rel="stylesheet" media="screen">
-	{% elif project.first.project_type == "Various" %}
 				<link href="/static/css/nav_bar_various.css" rel="stylesheet" media="screen">
 	{%  else %}
 
@@ -24,19 +19,24 @@
 	{% if   project == "theatre" or project == "film"  or project == "tv" or project == "various" %}
 			
 	{%  else %}
+		
+<div class="content" id="project_content">
 		{% for item in project %}
-				<div class="content">
 				
-
-
-
-					<h3 class="h3"> {{ item.title }} </h3>
-						<a 	id="single_pro" 
-							href="/{{project.first}}/{{item.id}}">
-							<img class="img" alt="{{ item.title }}" src="{{item.photos.first.photo_thumbnail.url}}"  title="{{photo.title}}"/>
+				<div class="content_container" id="project_content_container">
+					<div class="img_and_title_container" id="project_img_and_title_container">
+						<a id="single_pro" href="/{{project.first}}/{{item.id}}">
+								
+								<h3 class="h3" id="project_title"> {{ item.title }} </h3>
+								<img 	class="img" alt="{{ item.title }}" 
+										src="{{item.photos.first.photo_thumbnail.url}}"  
+										title="{{photo.title}}"/>
 						</a> 
-
+						
+					</div>
 				</div>
 		{% endfor %}
+</div>		
 	{% endif %}
-{% endblock %}
+{% endblock %}§	
+

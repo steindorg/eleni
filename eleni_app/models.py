@@ -14,10 +14,26 @@ class Photo(models.Model):
     photo =models.ImageField(upload_to='photos')
     photo_thumbnail = ImageSpecField(
         source='photo',
-        processors=[SmartResize(500, 500)],
+        processors=[SmartResize(550, 400)],
         format='JPEG',
         options={'quality': 1000}
         )
+
+    photo_thumbnail_home_view = ImageSpecField(
+        source='photo',
+        processors=[SmartResize(290, 190)],
+        format='JPEG',
+        options={'quality': 1000}
+        )
+    photo_thumbnail_pro_details = ImageSpecField(
+        source='photo',
+        processors=[SmartResize(442, 300)],
+        format='JPEG',
+        options={'quality': 1000}
+        )
+    
+
+
 
     def __str__(self):
         return self.title

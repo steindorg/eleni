@@ -63,7 +63,7 @@ def eleni(request):
 		a.insert(len(a), theatre_project[1])
 	
 	if len(film_project) > 0:
-		print ("film yo yo yo ")
+		
 		a.insert(len(a), film_project[0])
 		a.insert(len(a), film_project[1])
 		
@@ -75,8 +75,8 @@ def eleni(request):
 	if len(film_project) > 0:
 		a.insert(len(a), various_project[0])
 		a.insert(len(a), various_project[1])
-		print ("various")
-	
+		
+		print(a)
 	return render_to_response('eleni.html', { 'projects': a }, context_instance=RequestContext(request))
 
 def about(request):
@@ -108,6 +108,7 @@ def project(request, pro_name):
 		if len(project) == 0:
 			project = pro_name
 
+	print(project.first())
 	return render_to_response('project.html', { 'project': project}, context_instance=RequestContext(request))
 
 

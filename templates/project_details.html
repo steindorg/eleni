@@ -4,40 +4,78 @@
 
 
 {% block project_details %}
+	{% if project_details.project_type == "Theatre" %}
+				<link href="/static/css/nav_bar_theatre.css" rel="stylesheet" media="screen">
+	{% elif project_details.project_type == "Film" %}
+				<link href="/static/css/nav_bar_film.css" rel="stylesheet" media="screen">
+	{% elif project_details.project_type == "Tv"  %}
+				<link href="/static/css/nav_bar_tv.css" rel="stylesheet" media="screen">
+	{% elif project_details.project_type == "Various" %}
+				<link href="/static/css/nav_bar_various.css" rel="stylesheet" media="screen">
+	{%  else %}
+
+
+	{% endif %}	
+
+
+
+
+
+
 	<div class="content">
 		
 		<!-- text and video block -->
-		<div>
-			<div style="margin-top: 100px;"> 
-				<h2>{{tproject_details.title}}</h2> 
-					{{project_details.text}} 
-			<div>
+		
+			<div id="pro_details_text"> 
+				<h2>{{project_details.title}}</h2> 
+					<p>{{project_details.description_box1}} </P>
+					<p>{{project_details.description_box2}} </P>
+					<p>{{project_details.role1}} </P>
+					<p>{{project_details.role2}} </P>
+					<p>{{project_details.role3}} </P>
+					<p>{{project_details.role4}} </P>
+					<p>{{project_details.role5}} </P>
+					<p>{{project_details.role6}} </P>
+					<p>{{project_details.role7}} </P>
+					<p>{{project_details.role8}} </P>
+					<p>{{project_details.role9}} </P>
+					<p>{{project_details.preview_date}}</P>
 
 			
-			<div style="position: static; margin-top: 100px;">
-				{%  for x in project_details.videos.all  %}
-	
-					{% video x.video "medium" %}
-					
-				{% endfor %}		
+
 
 			</div>
-		</div>	
-		<!-- end text and video block -->
 
-
-
-		<!-- image block -->
-			<div style="position: static; margin-top: 100px;">
+			<!-- image block -->
+			
+			<div id="img_wrapper">
 				
 				{% for p in project_details.photos.all %}
-					<img class="img" alt="{{ p.title }}" src="{{ p.photo.url }}"/>
+					<img class="pro_details_img" alt="{{ p.title }}" 
+					src="{{ p.photo_thumbnail_pro_details.url }}"/>
 				{% endfor %}
 
 			
 
 			</div>
-		<!-- end image block -->
+			
+			<!-- video block -->
+			
+
+			<div id="video_container">
+				{%  for x in project_details.videos.all  %}
+	
+					<div id="video">{% video x.video "441x360" %}
+					
+				{% endfor %}		
+
+			</div>
+		
+		
+
+
+
+	
 	
 	</div>
 

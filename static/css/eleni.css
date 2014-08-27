@@ -1,55 +1,119 @@
+#entercolor{
+background-color: #D0D6D0;
+
+
+}
+.entrance {
+  
+  width: 1000px;
+  height: 1000px;
+  margin-left: 300px;
+  margin-top: 220px;
+}
+
+#clicktoenter{
+	margin-left: 40px;
+	
+}
+
+#clicktoenter1{
+	margin-left: 8px;
+	
+}
+
+
+
 
 /*giving the body a width*/
 body{
-	width: 100%;
-  	max-width: 960px;
-  	margin: 0 auto; }
+	margin-left : 10%;
+	margin-right : 10%;
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* xxxxxxxxxxxxxxxxxxx   xx     Nav bar     xx     xxxxxxxxxxxxxx*/
 
 /* Make the nav take up the whole body width, and give it some top and bottom margin space */
+
+
 .nav_div{
-	width:100%;
-	margin:50px 0;
+	
 	position: fixed;
+  	z-index: 1;
+  	top: 0;
+  	
+  	width: 72.5%;
+  	
+  	padding-top: 20px;
+  	padding-bottom: 1px;
+  	/* Adds shadow to the bottom of the bar */
+  	
+  	/* Adds the transparent background */
+  	background-color: white;
+  	border-bottom: 1px dotted black;
+    
+}
+#nav_wrapper{
+
+  	width: 960px; 
+  	margin-left: 10%;
+	margin-right: 10%;
 
 }
+
 
 .nav_div ul{
 	/*background-color: #C0C6D0;*/ 
+	display: block;
 	width: 100%; 
 	list-style: none;
-	margin:6px 0;
-	padding: 0;
-	border-bottom: 1px dotted black;
+	
+	background-color: white;
+	
 }
+
 
 .nav_div ul li {
 /*
 There are 8 navigation links, so they each need to take up  1/8 of the total nav bar width. This means each <li> should be 20% wide, 
 and the anchors inside of them should take up 100% of the <li>. 
 */	
-	width: 8.5%;
+	margin-left: -40px;
+	margin-right: -30px;
+	width: 20.0%;
 	/*To make them appear in a horizontal row, use float.*/
-	margin: 1px 20px -3px 30px;
-	display:inline-block;
+	float: left;
+	
+
 }
 
 .nav_div ul li a{
-	text-align: center;
-	display:block;
+	
+	/*display:block;*/
+	background-color: white;
 	width:100%;
 	text-decoration: none;
 	color: black;
-}
+	}
 
 .nav_div #elenipro{
-	display: block;
+	background-color: white;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	margin-left: 47px;
+	
 	font-size: 40px;
 	text-decoration: none;
 	color: black;
@@ -57,95 +121,220 @@ and the anchors inside of them should take up 100% of the <li>.
 
 .nav_div ul li a:hover{
 	color: grey;
+
 }
+
+
+
+
+
 
 /* xxxxxxxxxxxxxxxxxxx   xx    main content    xx	  xxxxxxxxxxxxxx*/
 
 /*  fyrir lista af myndum sem syna theatre project    */
-.content{
-	/*margin-top: 100px;
-	margin-left: 120px;
-	display: inline-block;
-	/*vertical-align: top;
-	position: inherit; */
+#main_cat{
+	/*width:100%;
+	margin-top: 40px;*/
+	/*clear: both;*/
+	margin-top: 150px;
+
 }
-.content h3 a {
-	height: 100px; 
-	width: 200px; 
+
+
+
+.content{
+								
+	
+
+}
+
+
+
+.hide{
+	display: none;
+}
+
+/*xxxxxxxxxxxxxx home display xxxxxxxxxxxxxxxxxxxxx*/
+
+#home_content{
+	width: 100%;
+	
+}
+
+#home_content_container{
+	float:left;
+	margin-right: 30px;
+	margin-bottom:20px;
+
+}
+
+
+#home_img_and_title_container{
+	position:relative;
+}
+
+#home_img_and_title_container a{
+	position:relative;
+
+
+}
+
+
+#home_project_titles{
+	position: absolute;
+	margin-top: 70px;
+	display: none;
+	color: black;
+	width: 100%;
+	text-align: center;
 	overflow: hidden;
+	font-size: 40px;
+}
+
+
+/*xxxxxxxxxxxxxxx project display XXXXXXXXXXXXX*/
+
+#project_content{
+	
+	margin-bottom: 55px;
+	width: 100%;
+	text-align: center;
+}
+#project_content_container{
+	float: left;
+   	width:100%;
+    /* Scale the background image to be as 
+    large as possible so that the background area is 
+    completely covered by the background image.     */
+    background-size:cover;
+    overflow:hidden;
+
+}
+#project_img_and_title_container{
+	margin-bottom: 25px;
+	position:relative;
+}
+
+#project_title{
+	position:absolute;
+	display: none;
+	color: black;
+	overflow: hidden;
+	font-size: 40px;
+	margin-top: 165px;
+	width: 100%;
+ 	
+  	font-family:Arial;
+}
+.content a {
+	position:relative;
 }
 /*fadein text */
-.h3 {
-	margin-top: 110px;
-	margin-left: 50px;
-	position: absolute; 
-   	font-size: 40px;
-   	color: solid black;
-   	/*background: rgb(0, 0, 0); /* fallback color 
-   	background: rgba(0, 0, 0, 0.7);*/
-   	display: none;
-}
-.contenttitle{
-	margin-top: 50px;
-	margin-left: 11px;
-	display: inline-block;
-}
+
 .img{
-	height:100px
-    width:auto;/*maintain aspect ratio*/
-    max-width:400px;
-    /*z-index: -1;*/
+	
+   
+    z-index: -1;
+}
+/*xxxxxxxxxxx project details   xxxxxxxxxxxxxxx*/
+
+#pro_details_container{
+
+
 }
 
-.highlight{
-	z-index: -1;
-	height:70px
-    width:auto;/*maintain aspect ratio*/
-    max-width:200px;
-    filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	filter: grayscale(100%);
-	filter: blur(50px);
-	filter: gray;
-	-webkit-filter: grayscale(1) blur(1px);
+#pro_details_text{
+	
+	float:left;
+	height: 0px;
+	width: 50%;
+	position: fixed;
+
 }
 
-#introtext{
-	display: inline-block;
-	position: absolute;
-	top: 160px;
-	left: 105px;
+#pro_details_text > p{
+	margin-right: 180px;
+
+}
+#pro_details_text > h2{
+	margin-right: 180px;
+	margin-top: -10px;
 }
 
-.hide{display: none;}
+#img_wrapper{
+	float:right;
+	margin-right: 26px;
+	width: 50%
+
+}
+
+#pro_details_img{
+	float:right;
+
+}
+
+#video_container{
+	float:right;
+	width: 50%;
+	margin-right: 26px;
+}
+#video{
+
+
+	
+}
+
+
+
+
 
 /*xxxxxxxxxxxxxxxxxxx About html  xxxxxxxxxxxxxxxx*/
+#about_h2_text{
+	margin-top: -20px;
+	font-size: 18px;
+
+}
+
+
 #text{
 	font-size: 14px;	
-	margin-top: -468px;
+	margin-top: -508px;
     margin-bottom: 0px;
-    margin-right: 575px;
-    margin-left: 0px;
+    margin-right: 700px;
+    
 	float: left;
-
+	/*clear:both;*/
 }
 
 #about_img{
+	margin-right: 97px;
 	float:right;
 }
+
+
+
+
+/*xxxxxxxxxxxxxxxxxxx Contact html xxxxxxxxxxxxxxxx*/
+#contact_info{
+	margin-left: 349px;
+	
+}
+
+
+
+
 /*xxxxxxxxxxxxxxxxxxx links html  xxxxxxxxxxxxxxxx*/
 #link_content{
 	display:block;
-	text-align:center;
-	margin-top: 80px;
+	
+	margin-top: -15px;
 }
 #link{
 	display:block;
 	margin-top: 30px;
-    margin-bottom: 0px;
-    margin-right: 0px;
-    margin-left: 0px;
+   	margin-bottom: 0px;
+  /*   margin-right: 0px;
+    margin-left: 0px;*/
 }
 #link_content a{
 	text-decoration: none;
@@ -156,16 +345,12 @@ and the anchors inside of them should take up 100% of the <li>.
 	color: grey;
 	text-decoration: underline;
 }
-/*xxxxxxxxxxxxxxxxxxx Contact html xxxxxxxxxxxxxxxx*/
-#contact_info{
-	text-align:center;	
-	margin-top: 80px;
+
+/*xxxxxxxxx java script stuff xxxxxxxxxx*/
+.active{
+	border-bottom: 3px solid #000;
+
+
 }
-
-
-
-
-
-
 
 
