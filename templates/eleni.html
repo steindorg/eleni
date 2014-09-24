@@ -4,27 +4,28 @@
 
 {% block home %}
 
-	
+
 	<div class="content" id="home_content">
 	{% for item in projects %}
-			
+
 		<div class="content_container" id="home_content_container">
 
-			
-			<div class="img_and_title_container" id="home_img_and_title_container">	
-				<a 	id="single_pro" href="/{{item.project_type}}/{{item.id}}">
-					<h3 class="h3" id="home_project_titles"> {{ item.title }} </h3>	
-					<img class="img" 
-						 alt="{{ item.title }}" 
+
+			<div class="img_and_title_container" id="home_img_and_title_container">
+				<a 	id="single_pro" href="/{{item.project_type}}/{{item.id}}" title="{{item.project_type}}">
+					<div class="home_img_color_container"></div>
+					<h3 class="h3" id="home_project_titles"> {{ item.title }} </h3>
+					<img class="img"
+						 alt="{{ item.title }}"
 						 src="{{ item.photos.first.photo_thumbnail_home_view.url }}"/>
 				</a>
 			</div>
 		</div>
 
 	{% endfor %}
-	</div>		
+	</div>
 {% endblock %}
 
 
-			
-			
+
+

@@ -149,7 +149,7 @@ class Migration(SchemaMigration):
             'description_box1': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             'description_box2': ('django.db.models.fields.TextField', [], {'blank': 'True'}),
             'id': ('django.db.models.fields.AutoField', [], {'primary_key': 'True'}),
-            'photos': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['eleni_app.Photo']", 'symmetrical': 'False'}),
+            'photos': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'to': "orm['eleni_app.Photo']"}),
             'preview_date': ('django.db.models.fields.DateField', [], {}),
             'project_type': ('django.db.models.fields.CharField', [], {'max_length': '7'}),
             'role1': ('django.db.models.fields.CharField', [], {'max_length': '60', 'blank': 'True'}),
@@ -162,7 +162,7 @@ class Migration(SchemaMigration):
             'role8': ('django.db.models.fields.CharField', [], {'max_length': '60', 'blank': 'True'}),
             'role9': ('django.db.models.fields.CharField', [], {'max_length': '60', 'blank': 'True'}),
             'title': ('django.db.models.fields.CharField', [], {'max_length': '30'}),
-            'videos': ('django.db.models.fields.related.ManyToManyField', [], {'to': "orm['eleni_app.Video_Link']", 'symmetrical': 'False', 'blank': 'True'})
+            'videos': ('django.db.models.fields.related.ManyToManyField', [], {'symmetrical': 'False', 'to': "orm['eleni_app.Video_Link']", 'blank': 'True'})
         },
         'eleni_app.video_link': {
             'Meta': {'object_name': 'Video_Link'},

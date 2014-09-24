@@ -15,68 +15,64 @@
 	{%  else %}
 
 
-	{% endif %}	
+	{% endif %}
 
+	<div class="content" id="pro_details_container">
 
-
-
-
-
-	<div class="content">
-		
 		<!-- text and video block -->
-		
-			<div id="pro_details_text"> 
-				<h2>{{project_details.title}}</h2> 
-					<p>{{project_details.description_box1}} </P>
-					<p>{{project_details.description_box2}} </P>
-					<p>{{project_details.role1}} </P>
-					<p>{{project_details.role2}} </P>
-					<p>{{project_details.role3}} </P>
-					<p>{{project_details.role4}} </P>
-					<p>{{project_details.role5}} </P>
-					<p>{{project_details.role6}} </P>
-					<p>{{project_details.role7}} </P>
-					<p>{{project_details.role8}} </P>
-					<p>{{project_details.role9}} </P>
-					<p>{{project_details.preview_date}}</P>
 
-			
-
-
+			<div id="pro_details_text">
+				<h2>{{project_details.title}}</h2>
+				<p>{{project_details.description_box1}} </P>
+				<p>{{project_details.description_box2}} </P>
+				<p>{{project_details.role1}} </P>
+				<p>{{project_details.role2}} </P>
+				<p>{{project_details.role3}} </P>
+				<p>{{project_details.role4}} </P>
+				<p>{{project_details.role5}} </P>
+				<p>{{project_details.role6}} </P>
+				<p>{{project_details.role7}} </P>
+				<p>{{project_details.role8}} </P>
+				<p>{{project_details.role9}} </P>
+				<p>{{project_details.preview_date}}</P>
 			</div>
 
 			<!-- image block -->
-			
-			<div id="img_wrapper">
-				
-				{% for p in project_details.photos.all %}
-					<img class="pro_details_img" alt="{{ p.title }}" 
-					src="{{ p.photo_thumbnail_pro_details.url }}"/>
-				{% endfor %}
 
-			
+			<div id="img_wrapper">
+                <img src="/static/img/arrow_2_left.jpg" width="40" alt="arrow" id="left"/>
+                <img src="/static/img/arrow_2_right.jpg" width="40" alt="arrow" id="right"/>
+
+
+                <div id="slider">
+				    {% for p in project_details.photos.all %}
+
+					    <img class="pro_details_img" alt="{{ p.title }}" id="slide{{forloop.counter}}"
+					    src="{{ p.photo_thumbnail_pro_details.url }}"/>
+				    {% endfor %}
+                </div>
+
 
 			</div>
-			
+
 			<!-- video block -->
-			
+
 
 			<div id="video_container">
 				{%  for x in project_details.videos.all  %}
-	
+
 					<div id="video">{% video x.video "441x360" %}
-					
-				{% endfor %}		
+
+				{% endfor %}
 
 			</div>
-		
-		
 
 
 
-	
-	
+
+
+
+
 	</div>
 
 {% endblock %}

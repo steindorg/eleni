@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import django
-# SETTINGS_DIR                              POINTS TO WHERE SETTINGS.PY IS 
+# SETTINGS_DIR                              POINTS TO WHERE SETTINGS.PY IS
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 #DJANGO_ROOT = os.path.dirname(os.path.realpath(django.__file__))
 #SITE_ROOT = os.path.dirname(os.path.realpath('__file__'))
@@ -42,7 +42,6 @@ INSTALLED_APPS = (
     'eleni_app',
     'south',
     'django_extensions',
-    'rest_framework',
     'imagekit',
     'embed_video',
 )
@@ -57,9 +56,9 @@ MIDDLEWARE_CLASSES = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    
+
     'django.core.context_processors.request',
-    'django.contrib.auth.context_processors.auth' 
+    'django.contrib.auth.context_processors.auth'
 
 )
 
@@ -73,9 +72,18 @@ WSGI_APPLICATION = 'eleni.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'ENGINE': 'django.db.backends.sqlite3',
+         'ENGINE': 'mysql.connector.django',
+        'NAME': 'steindor$eleni',
+        'USER': 'steindor',
+        'PASSWORD': 'eleni',
+        'HOST': 'mysql.server',
+        'CONN_MAX_AGE': 5,
     }
+}
+
+SOUTH_DATABASE_ADAPTERS = {
+    'default' : 'south.db.mysql'
 }
 
 
@@ -105,7 +113,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATIC_URL = '/static/'
 
-    
+
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/'),

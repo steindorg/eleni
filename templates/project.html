@@ -14,29 +14,31 @@
 	{%  else %}
 
 
-	{% endif %}	
-	
+	{% endif %}
+
 	{% if   project == "theatre" or project == "film"  or project == "tv" or project == "various" %}
-			
+
 	{%  else %}
-		
+
 <div class="content" id="project_content">
 		{% for item in project %}
-				
+
 				<div class="content_container" id="project_content_container">
-					<div class="img_and_title_container" id="project_img_and_title_container">
+					<div class="img_and_title_container" id="project_img_and_title_container" >
+						<h3 class="h3" id="project_title"> {{ item.title }} </h3>
 						<a id="single_pro" href="/{{project.first}}/{{item.id}}">
-								
-								<h3 class="h3" id="project_title"> {{ item.title }} </h3>
-								<img 	class="img" alt="{{ item.title }}" 
-										src="{{item.photos.first.photo_thumbnail.url}}"  
+
+                            <div class="img_color_container"></div>
+
+								<img 	class="project_img" alt="{{ item.title }}"
+										src="{{item.photos.first.photo_thumbnail.url}}"
 										title="{{photo.title}}"/>
-						</a> 
-						
+						</a>
+
 					</div>
 				</div>
 		{% endfor %}
-</div>		
+</div>
 	{% endif %}
-{% endblock %}§	
+{% endblock %}§
 

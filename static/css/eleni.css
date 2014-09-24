@@ -1,276 +1,275 @@
-#entercolor{
-background-color: #D0D6D0;
+/*--------- enter page ----------*/
 
-
+#enterbody{
+    height: 100vh;
+    cursor: pointer;
 }
-.entrance {
-  
-  width: 1000px;
-  height: 1000px;
-  margin-left: 300px;
-  margin-top: 220px;
+.enter_container{
+    margin-top: 60px;
+    margin-left:20%;
 }
+.enter_img{
+    width:70%;
 
-#clicktoenter{
-	margin-left: 40px;
-	
-}
-
-#clicktoenter1{
-	margin-left: 8px;
-	
 }
 
 
 
-
-/*giving the body a width*/
+/* ---- main ---- */
 body{
-	margin-left : 10%;
-	margin-right : 10%;
-	
+    background-image:url('/static/img/eleni_gray.jpg');
+
+
+}
+
+
+p{
+    font-size: 14px;
+    line-height: 1.3em;
+    color: #5c5c5c;
+    font-family: 'P22JohnstonUndergroundW 945068', Arial, Helvetica, Sans-Serif;
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* xxxxxxxxxxxxxxxxxxx   xx     Nav bar     xx     xxxxxxxxxxxxxx*/
-
-/* Make the nav take up the whole body width, and give it some top and bottom margin space */
-
-
+/* --------------     Nav bar  -----------------------*/
 .nav_div{
-	
-	position: fixed;
-  	z-index: 1;
-  	top: 0;
-  	
-  	width: 72.5%;
-  	
-  	padding-top: 20px;
-  	padding-bottom: 1px;
-  	/* Adds shadow to the bottom of the bar */
-  	
-  	/* Adds the transparent background */
-  	background-color: white;
-  	border-bottom: 1px dotted black;
-    
+    max-width: 1024px;
+    min-width: 960px;
+    width: 1024px;
+
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 40px;
+    left: 10%;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    background-image:url('/static/img/eleni_gray.jpg');
 }
-#nav_wrapper{
-
-  	width: 960px; 
-  	margin-left: 10%;
-	margin-right: 10%;
-
-}
-
 
 .nav_div ul{
-	/*background-color: #C0C6D0;*/ 
+
 	display: block;
-	width: 100%; 
+
+
 	list-style: none;
-	
 	background-color: white;
-	
+    vertical-align: baseline;
+
 }
-
-
-.nav_div ul li {
-/*
-There are 8 navigation links, so they each need to take up  1/8 of the total nav bar width. This means each <li> should be 20% wide, 
-and the anchors inside of them should take up 100% of the <li>. 
-*/	
-	margin-left: -40px;
-	margin-right: -30px;
-	width: 20.0%;
+.nav_div ul li:not(.last_li){
+	width: 16%;
 	/*To make them appear in a horizontal row, use float.*/
 	float: left;
-	
+	padding-top: 2em;
+	padding-bottom: 2px;
 
 }
 
-.nav_div ul li a{
-	
-	/*display:block;*/
-	background-color: white;
-	width:100%;
-	text-decoration: none;
-	color: black;
-	}
+.last_li{
+    position:absolute;
+    right: 0px;
+    padding-top: 2em;
+	padding-bottom: 2px;
 
+}
+.nav_div ul li a{
+
+	/*display:block;*/
+
+    vertical-align: sub;
+	text-decoration: none;
+	font-family:  Arial, Helvetica, Sans-Serif;
+	color: #5c5c5c;
+	}
+#tv_li{
+    margin:0 -3% 0 0;
+
+}
 .nav_div #elenipro{
-	background-color: white;
+    font-family: Sans-Serif;
 	margin-top: 20px;
 	margin-bottom: 20px;
-	
-	font-size: 40px;
 	text-decoration: none;
-	color: black;
+    font-weight: 100;
+    line-height: 1.3em;
+    color: #5c5c5c ;
+    letter-spacing: 1px;
+    font-size: 250.15%;
+    text-transform: uppercase;
 }
-
 .nav_div ul li a:hover{
 	color: grey;
 
 }
-
-
-
-
+#nav_about{
+    /*padding-left: 69%;*/
+    width: 23%;
+}
 
 
 /* xxxxxxxxxxxxxxxxxxx   xx    main content    xx	  xxxxxxxxxxxxxx*/
-
-/*  fyrir lista af myndum sem syna theatre project    */
 #main_cat{
-	/*width:100%;
-	margin-top: 40px;*/
-	/*clear: both;*/
-	margin-top: 150px;
+        min-width: 1005px; /* your desired width */
+        max-width: 100%;
+
+        position: relative;
+        overflow-x: hidden;
+
 
 }
-
-
-
 .content{
-								
-	
-
+    margin-left:10%;
+    /*margin-top: 20%;*/
+    max-width: 1150px;
+    width: 1024px;
+    margin-top: 200px;
+    position: relative;
+    height:500px;
 }
-
-
-
 .hide{
 	display: none;
 }
 
 /*xxxxxxxxxxxxxx home display xxxxxxxxxxxxxxxxxxxxx*/
 
-#home_content{
-	width: 100%;
-	
-}
-
 #home_content_container{
 	float:left;
-	margin-right: 30px;
+	margin-right: 25px;
 	margin-bottom:20px;
 
 }
-
-
 #home_img_and_title_container{
 	position:relative;
 }
-
 #home_img_and_title_container a{
 	position:relative;
-
-
+	float: left;
 }
-
-
 #home_project_titles{
+	font-family: 'Rajdhani', sans-serif;
 	position: absolute;
 	margin-top: 70px;
 	display: none;
-	color: black;
+	color: white;
 	width: 100%;
 	text-align: center;
-	overflow: hidden;
+	pointer-events: none;
 	font-size: 40px;
+    z-index: 1;
 }
+.home_img_color_container{
+    background-color: #A5D6DB;
+    /* left: 10%; */
+    padding-bottom: 67.5%;
+    width: 100.0%;
+    position: absolute;
+    z-index: -10;
+}
+.img{
+    z-index: -1;
 
+}
 
 /*xxxxxxxxxxxxxxx project display XXXXXXXXXXXXX*/
 
 #project_content{
-	
+
 	margin-bottom: 55px;
-	width: 100%;
-	text-align: center;
+    width: 1024px;
+	/*text-align: center;*/
 }
 #project_content_container{
 	float: left;
-   	width:100%;
-    /* Scale the background image to be as 
-    large as possible so that the background area is 
+   	width: 1024px;
+    /* Scale the background image to be as
+    large as possible so that the background area is
     completely covered by the background image.     */
     background-size:cover;
     overflow:hidden;
+
 
 }
 #project_img_and_title_container{
 	margin-bottom: 25px;
 	position:relative;
+	background-image:url('/static/img/pattern33.jpg');
 }
-
 #project_title{
 	position:absolute;
-	display: none;
+    font-weight: 100;
 	color: black;
-	overflow: hidden;
-	font-size: 40px;
-	margin-top: 165px;
-	width: 100%;
- 	
-  	font-family:Arial;
-}
-.content a {
-	position:relative;
-}
-/*fadein text */
+    font-family:  Sans-Serif;
+	font-size: 27px;
+	margin-top: 300px;
+	margin-left: 61%;
+    z-index: 1;
+    float: right;
 
-.img{
-	
-   
+
+
+}
+#project_content a {
+	position:relative;
+	margin-left: 5%;
+    text-decoration:none;
+}
+.img_color_container{
+
+
+    padding-bottom: 410px;
+    width: 100.0%;
+    position: absolute;
+    z-index: -10;
+
+}
+.project_img{
     z-index: -1;
 }
+
 /*xxxxxxxxxxx project details   xxxxxxxxxxxxxxx*/
 
 #pro_details_container{
-
-
+    position:fixed;
 }
 
 #pro_details_text{
-	
 	float:left;
-	height: 0px;
-	width: 50%;
 	position: fixed;
-
+	width: 280px;
 }
 
-#pro_details_text > p{
-	margin-right: 180px;
+#pro_details_text h2{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+    margin-bottom: 18px;
+    color:#D6AC30;
+    font-weight: 400;
 
 }
-#pro_details_text > h2{
-	margin-right: 180px;
-	margin-top: -10px;
-}
-
 #img_wrapper{
-	float:right;
-	margin-right: 26px;
-	width: 50%
+
+	margin-left: 30.5%;
+}
+#pro_details_text p{
+
+    margin-bottom: 15px;
 
 }
+#pro_details_text > p{
 
-#pro_details_img{
+
+}
+/* --- sama og .slide i tutorial ---*/
+.pro_details_img{
 	float:right;
-
+    margin-bottom: 6%;
+    position: absolute;
+    display:none;
+    width: 67%;
+    max-width: 750px;
+    min-width:650px;
 }
 
 #video_container{
@@ -279,45 +278,87 @@ and the anchors inside of them should take up 100% of the <li>.
 	margin-right: 26px;
 }
 #video{
-
-
-	
 }
 
+#slider{
+    /*float: right;*/
+    /*max-width: 750px;*/
+    /*width: 100%;*/
 
+}
 
+#slide1{
+    position:absolute;
+    display: block;
+    z-index:1;
+}
+#right
+{
+    position:absolute;
+    top: 177px;
+    left: 97.1%;
+    cursor:pointer;
+}
+#left
+{
+    position:absolute;
+    top: 175px;
+    left: 27%;
+    cursor:pointer;
 
+}
 
 /*xxxxxxxxxxxxxxxxxxx About html  xxxxxxxxxxxxxxxx*/
-#about_h2_text{
-	margin-top: -20px;
-	font-size: 18px;
+#about_container{
 
 }
-
-
+#about_h2_text{
+	font-size: 18px;
+    font-family: helvetica;
+    font-weight: 100;
+}
 #text{
-	font-size: 14px;	
-	margin-top: -508px;
-    margin-bottom: 0px;
-    margin-right: 700px;
-    
+	margin-top: 10px;
+    width: 40%;
+
 	float: left;
 	/*clear:both;*/
 }
-
 #about_img{
-	margin-right: 97px;
+    float:right;
+    max-width: 600px;
+
+}
+#about_img_1024{
+	margin-right: -90px;
 	float:right;
+    position: fixed;
+    left: 45%;
+    display: none;
+}
+#about_img_868{
+	margin-right: -90px;
+	float:right;
+    position: fixed;
+    left: 45%;
+    display: none;
 }
 
-
-
+#about_h2_text span{
+    font-family: sans-serif;
+    font-weight: 100;
+}
 
 /*xxxxxxxxxxxxxxxxxxx Contact html xxxxxxxxxxxxxxxx*/
 #contact_info{
-	margin-left: 349px;
-	
+    padding-left: 860px;
+
+
+}
+
+#contact_info p{
+    line-height: 2;
+    font-size: 16px;
 }
 
 
@@ -325,16 +366,16 @@ and the anchors inside of them should take up 100% of the <li>.
 
 /*xxxxxxxxxxxxxxxxxxx links html  xxxxxxxxxxxxxxxx*/
 #link_content{
-	display:block;
-	
-	margin-top: -15px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 18px;
+
 }
 #link{
 	display:block;
 	margin-top: 30px;
    	margin-bottom: 0px;
-  /*   margin-right: 0px;
-    margin-left: 0px;*/
+     margin-right: 0px;
+    margin-left: 0px;
 }
 #link_content a{
 	text-decoration: none;
@@ -354,3 +395,1031 @@ and the anchors inside of them should take up 100% of the <li>.
 }
 
 
+/*xxxxxxxxx media queries  xxxxxxxxxx*/
+
+/*--------- Media queries ---------*/
+
+@media (min-width: 1450px){
+
+    .nav_div{
+        max-width: 1150px;
+        min-width: 960px;
+        width: 1150px;
+        left: 15%;
+        }
+
+
+
+
+    .content{
+        margin-left: 15%;
+    }
+
+/*------ pro details -----*/
+    .pro_details_img{
+	    float:right;
+        margin-bottom: 6%;
+        position: absolute;
+        display:none;
+        width: 77%;
+        max-width: 850px;
+        min-width:650px;
+        }
+
+    #pro_details_text {
+        width: 270px;
+    }
+    #right{
+        position:absolute;
+        top: 217px;
+        left: 107%;
+        cursor:pointer;
+        }
+    #left{
+        top: 215px;
+        }
+
+
+/*------ contact -----*/
+    #contact_info{
+        padding-left: 967px;
+        width: 10%;
+        }
+
+/*------ about -----*/
+    #about_img{
+        float: right;
+        max-width: 740px;
+        position: fixed;
+    }
+    #text {
+        margin-top: 10px;
+        width: 35%;
+        float: left;
+        /* clear: both; */
+        margin-right: 50px;
+    }
+
+}
+
+@media (max-width: 1152px){
+    .nav_div{
+    max-width: 1024px;
+    min-width: 960px;
+    width: 70%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 40px;
+    left: 10%;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    background-image:url('/static/img/eleni_gray.jpg');
+    }
+/*------about -----*/
+    #about_container {
+        width: 960px;
+    }
+    #text {
+        margin-top: 10px;
+        width: 35%;
+        float: left;
+        /* clear: both; */
+    }
+    #about_img {
+        float: right;
+        max-width: 600px;
+    }
+
+/*------contact info -----*/
+    #contact_info{
+        padding-left: 808px;
+    }
+    #contact_info p{
+    line-height: 2;
+    font-size: 14px;
+    }
+/*------home -----*/
+    #home_content_container {
+        float: left;
+        margin-right: 21px;
+        margin-bottom: 20px;
+    }
+/*------pro details -----*/
+    .pro_details_img {
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 59%;
+    max-width: 730px;
+    min-width: 450px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 157px;
+        left: 89.1%;
+        cursor:pointer;
+        }
+    #left{
+        position:absolute;
+        top: 155px;
+        left: 27%;
+        cursor:pointer;
+        }
+}
+
+
+@media (max-width: 1100px){
+    .content{
+        max-width: 960px;
+         margin-left: 13%;
+        width: 960px;
+    }
+
+    .nav_div{
+    max-width: 960px;
+    min-width: 800px;
+    width: 60%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 40px;
+    left: 13%;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    background-image:url('/static/img/eleni_gray.jpg');
+    }
+/*------pro details -----*/
+    .pro_details_img {
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 49%;
+    max-width: 660px;
+    min-width: 400px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 121px;
+        left: 79.1%;
+        cursor:pointer;
+        }
+    #left{
+        position:absolute;
+        top: 119px;
+        left: 27%;
+        cursor:pointer;
+        }
+/*------about -----*/
+    #about_container {
+        width:930px;
+    }
+    #text {
+        margin-top: 10px;
+        width: 35%;
+        float: left;
+        /* clear: both; */
+    }
+    #about_img {
+        float: right;
+        max-width: 470px;
+        padding-right: 130px;
+}
+/*------contact info -----*/
+    #contact_info{
+    padding-left: 675px;
+    }
+    #contact_info p{
+    line-height: 2;
+    font-size: 12px;
+    }
+/*------home -----*/
+    #home_content_container {
+        float: left;
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1024px){
+    .content{
+        max-width: 960px;
+         margin-left: 10.5%;
+        width: 950px;
+    }
+    #main_cat{
+        min-width: 960px; /* your desired width */
+        max-width: 100%;
+        position: relative;
+
+    }
+
+
+    .nav_div{
+    max-width: 960px;
+    min-width: 800px;
+    width: 60%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 40px;
+    left: 10.5%;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    background-image:url('/static/img/eleni_gray.jpg');
+    }
+/*------pro details -----*/
+    .pro_details_img {
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 49%;
+    max-width: 660px;
+    min-width: 400px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 122px;
+        left: 79.1%;
+        cursor:pointer;
+        }
+    #left{
+        position:absolute;
+        top: 120px;
+        left: 27%;
+        cursor:pointer;
+        }
+
+/*------contact info -----*/
+    #contact_info{
+    padding-left: 675px;
+    }
+/*------home -----*/
+    #home_content_container {
+        float: left;
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 969px){
+    .content{
+        max-width: 960px;
+        margin-left: 8%;
+        width: 960px;
+    }
+    #main_cat{
+        min-width: 900px; /* your desired width */
+        max-width: 100%;
+        position: relative;
+
+    }
+
+    .nav_div{
+    max-width: 960px;
+    min-width: 800px;
+    width: 60%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 40px;
+    left: 8%;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    background-image:url('/static/img/eleni_gray.jpg');
+    }
+/*------pro details -----*/
+    .pro_details_img {
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 49%;
+    max-width: 660px;
+    min-width: 400px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 122px;
+        left: 79.1%;
+        cursor:pointer;
+        }
+    #left{
+        position:absolute;
+        top: 120px;
+        left: 27%;
+        cursor:pointer;
+        }
+
+/*------contact info -----*/
+    #contact_info{
+    padding-left: 675px;
+    }
+/*------home -----*/
+    #home_content_container {
+        float: left;
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 930px){
+    .content{
+        max-width: 960px;
+        margin-left: 7.1%;
+        width: 960px;
+    }
+    #main_cat{
+        min-width: 900px; /* your desired width */
+
+    }
+
+    .nav_div{
+    max-width: 960px;
+    min-width: 800px;
+    width: 60%;
+
+    position: fixed;
+    z-index: 10;
+    top: 0px;
+    padding-top: 40px;
+    left: 7.1%;
+    background-color: white;
+    border-bottom: 1px dotted black;
+    background-image:url('/static/img/eleni_gray.jpg');
+    }
+/*------pro details -----*/
+    .pro_details_img {
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 49%;
+    max-width: 660px;
+    min-width: 400px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 122px;
+        left: 79.1%;
+        cursor:pointer;
+        }
+    #left{
+        position:absolute;
+        top: 120px;
+        left: 27%;
+        cursor:pointer;
+        }
+
+/*------contact info -----*/
+    #contact_info{
+    padding-left: 675px;
+    }
+/*------home -----*/
+    #home_content_container {
+        float: left;
+        margin-right: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px){
+    .content{
+
+        margin-left: 5.1%;
+    }
+    #main_cat{
+        min-width: 860px; /* your desired width */
+
+    }
+
+    .nav_div{
+        left: 5.1%;
+    }
+/*------contact info -----*/
+    #contact_info p {
+        line-height: 2;
+        font-size: 12.2px;
+    }
+}
+
+@media (max-width: 880px){
+    .content{
+        margin-left: 4.1%;
+    }
+    #main_cat{
+        min-width: 800px; /* your desired width */
+
+    }
+    .nav_div{
+        left: 4.1%;
+    }
+/*------contact info -----*/
+    #contact_info p {
+        line-height: 2;
+        font-size: 12.2px;
+    }
+}
+
+@media (max-width: 860px){
+    .content{
+        margin-left: 3.1%;
+    }
+    .nav_div{
+        left: 3.1%;
+    }
+/*------contact info -----*/
+    #contact_info p {
+        line-height: 2;
+        font-size: 12.2px;
+    }
+}
+
+@media (max-width: 840px){
+    .content{
+        margin-left: 7.5%;
+        width: 840px;
+    }
+    .nav_div{
+        left: 7.5%;
+        min-width: 700px;
+        width: 50%;
+    }
+/*------contact info -----*/
+    #contact_info p {
+        line-height: 2;
+        font-size: 12.2px;
+    }
+     #contact_info{
+        padding-left: 588px;
+    }
+/*------project -----*/
+    #project_title{
+	position:absolute;
+    font-weight: 100;
+	color: black;
+    font-family:  Sans-Serif;
+	font-size: 17px;
+	margin-top: 300px;
+	margin-left: 57%;
+    z-index: 1;
+    float: right;
+
+
+
+}
+/*-----project details---*/
+    #pro_details_text{
+	    float:left;
+	    position: fixed;
+	    width: 250px;
+    }
+    .pro_details_img {
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 49%;
+    max-width: 660px;
+    min-width: 400px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 102px;
+        left: 78.8%;
+        cursor:pointer;
+        }
+    #left{
+        position:absolute;
+        top: 100px;
+        left: 27%;
+        cursor:pointer;
+        }
+
+/*----------about---------*/
+    #about_img {
+    float: right;
+    max-width: 370px;
+    padding-right: 230px;
+    }
+
+}
+
+@media (max-width: 800px){
+    .content{
+        margin-left: 15%;
+        width: 520px;
+        max-width: 520px;
+        margin-top:165px;
+        }
+    #main_cat{
+        min-width: 620px;
+
+    }
+    .nav_div{
+        left: 15%;
+        min-width: 520px;
+        width: 50%;
+        font-size: 12px;
+}
+/*------home -----*/
+    #home_content_container{
+
+    }
+    #home_img_and_title_container{
+
+    }
+    #home_img_and_title_container a{
+
+    }
+    #home_project_titles{
+	    display:block;
+	    color:black;
+	    margin: 190px 0 0 320px;
+        text-align: inherit;
+        font-size: 19px;
+    }
+    .home_img_color_container{
+        background-color: transparent;
+    }
+    .img{
+
+    }
+
+/*------contact info -----*/
+    #contact_info p {
+        line-height: 2;
+        font-size: 12.2px;
+    }
+     #contact_info{
+        padding-left: 394px;
+    }
+/*------project -----*/
+    #project_title{
+	position:absolute;
+    font-weight: 100;
+	color: black;
+    font-family:  Sans-Serif;
+	font-size: 17px;
+	margin-top: 147px;
+	margin-left: 300px;
+    z-index: 1;
+    float: right;
+    }
+    #project_content_container {
+    float: left;
+    width: 520px;
+    background-size: cover;
+    overflow: hidden;
+    }
+    #project_content a {
+        position: relative;
+        /* margin-left: 5%; */
+        text-decoration: none;
+    }
+    .project_img {
+        z-index: -1;
+        width: 50%;
+    }
+/*-----project details---*/
+    #pro_details_text{
+	    float:left;
+	    position: fixed;
+	    width: 350px;
+	    margin-left: 30px;
+	    margin-top:290px;
+
+    }
+    #img_wrapper{
+        margin-left: 5%;
+        margin-top:0px;
+
+    }
+    .pro_details_img{
+    float: right;
+    margin-bottom: 6%;
+    position: absolute;
+    display: none;
+    width: 420px;
+    max-width: 660px;
+    min-width: 466px;
+    }
+
+    #video_container{
+    	float:right;
+    	width: 50%;
+    	margin-right: 26px;
+        }
+    #video{}
+    #slider{
+        /*float: right;*/
+        /*max-width: 750px;*/
+        /*width: 100%;*/
+        }
+    #slide1{
+        position:absolute;
+        display: block;
+        z-index:1;
+        }
+    #right{
+        position:absolute;
+        top: 127px;
+        left: 94%;
+        cursor:pointer;
+        width:25px;
+        }
+    #left{
+        position:absolute;
+        top: 125px;
+        left: 1%;
+        cursor:pointer;
+        width:25px;
+    }
+
+/*-----about---*/
+
+    #about_container {
+        width: 530px;
+        position:fixed;
+    }
+
+   #about_h2_text{
+	    font-size: 16px;
+        font-family: helvetica;
+        font-weight: 100;
+        position: fixed;
+        margin-top: 319px;
+    }
+   #text {
+        margin-top: 339px;
+        width: 500px;
+        float: left;
+        overflow: hidden;
+        overflow-y: initial;
+        position: fixed;
+        height: 199px;
+        font-size: 12px;
+    }
+    #text p {
+        font-size:12px;
+    }
+    #about_img {
+
+        padding-right: 0px;
+        max-width: 470px;
+        float: right;
+        position: absolute;
+
+    }
+
+}
+@media (max-width: 680px){
+    .content{
+        margin-left: 95px;
+        width:70%;
+        margin-top:165px;
+        }
+    #main_cat{
+        min-width: 420px;
+    }
+    .nav_div{
+        left: 95px;
+        min-width: 470px;
+        width: 70%;
+        font-size: 12px;
+    }
+    .nav_div ul li:not(.last_li) {
+        width: 15%;
+        float: left;
+        padding-top: 2em;
+        padding-bottom: 2px;
+    }
+/*-----home----*/
+
+    #home_project_titles {
+        display: block;
+        color: black;
+        margin: -20px 0 0 0px;
+        text-align: inherit;
+        font-size: 19px;
+    }
+
+
+/*----project-----*/
+    #project_content {
+        margin-bottom: 55px;
+        width: 470px;
+    }
+    #project_content_container {
+        width: 100%;
+    }
+    #project_title {
+        position: absolute;
+        font-weight: 100;
+        color: black;
+        font-family: Sans-Serif;
+        font-size: 17px;
+        margin-top: 0px;
+        margin-left: 250px;
+        z-index: 1;
+        bottom: 0px;
+    }
+    .project_img {
+        z-index: -1;
+        width: 200px;
+    }
+/*---pro details---*/
+    .pro_details_img {
+        min-width: 326px;
+    }
+    #pro_details_text {
+        float: left;
+        position: fixed;
+        width: 350px;
+        margin-left: 20px;
+        margin-top: 270px;
+    }
+    #left {
+        left: 0.5%;
+        top: 110px;
+    }
+    #right {
+        top: 112px;
+        left: 438px;
+    }
+/*---contact info--------*/
+    #contact_info {
+        margin-left: 440px;
+        padding: 0;
+        position: fixed;
+    }
+/*---about--------*/
+    #about_container {
+        width: 330px;
+        position: fixed;
+    }
+    #about_h2_text {
+        margin-top: 320px;
+    }
+    #text {
+        margin-top: 340px;
+        width:70%;
+        height:199;
+    }
+}
+@media (max-width: 570px){
+    .nav_div{
+        left: 90px;
+        min-width: 320px;
+        width: 400px;
+        font-size: 12px;
+    }
+    .content{
+        margin-left:90px;
+    }
+    #project_content {
+        width: 400px;
+    }
+    #pro_details_text{
+        margin-top: 230px;
+    }
+    .pro_details_img {
+        min-width: 326px;
+        width: 350px;
+    }
+    #right {
+        top: 93px;
+        left: 366px;
+    }
+    #left {
+        top: 91px;
+        left:0.1%;
+
+    }
+    #contact_info {
+        margin-left: 365px;
+        padding: 0;
+        position: fixed;
+    }
+    #about_img {
+        max-width: 400px;
+    }
+    #about_h2_text {
+        margin-top: 275px;
+    }
+    #text {
+        margin-top: 297px;
+    }
+}
+@media (max-width: 520px){
+    .nav_div{
+        left: 60px;
+    }
+    .content{
+        margin-left:60px;
+    }
+        #contact_info{
+        margin-left: 335px;
+        }
+/*------about-------------*/
+        #text {
+            margin-top: 300px;
+            width: 90%;
+        }
+}
+
+@media (max-width: 460px){
+    .nav_div{
+        left: 29px;
+    }
+    .content{
+        margin-left:29px;
+        width:89%;
+    }
+    #contact_info{
+        margin-left: 335px;
+        }
+    #pro_details_text {
+            margin-top: 230px;
+        }
+    #pro_details_text > p {
+            line-height: 1.3em;
+            margin-bottom: 9px;
+        }
+/*---about----*/
+    #text {
+        margin-top: 310px;
+        width: 90%;
+    }
+}
+
+@media (max-width: 430px){
+    #main_cat {
+        min-width: 220px;
+    }
+    .nav_div{
+        left: 32px;
+        min-width: 200px;
+        width: 350px;
+
+    }
+    #nav_about {
+        width: 20%;
+    }
+    .content{
+        margin-left:32px;
+        width:89%;
+    }
+    #contact_info{
+        margin-left: 335px;
+        }
+    #pro_details_text {
+            margin-top: 230px;
+        }
+    #pro_details_text > p {
+            line-height: 1.3em;
+            margin-bottom: 9px;
+        }
+/*-----project-----*/
+        #project_content_container {
+            width: 87%;
+        }
+/*-----project details-----*/
+    .pro_details_img {
+        min-width: 306px;            width: 209px;
+    }
+    #pro_details_text {
+        margin-top: 190px;
+    }
+    #right {
+        top: 93px;
+        left:90%;
+    }
+/*-----about-----*/
+    #about_img {
+            max-width: 350px;
+        }
+    #text {
+        margin-top: 260px;
+        width: 82%;
+        height: 259px;
+    }
+    #about_h2_text {
+        margin-top: 237px;
+    }
+/*-----contact---*/
+    #contact_info {
+        margin-left: 258px;
+    }
+
+}

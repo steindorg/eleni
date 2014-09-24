@@ -5,7 +5,7 @@ from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill, SmartResize
 from embed_video.fields import EmbedVideoField
 from django.core.urlresolvers import reverse
-from django_thumbs.db.models import ImageWithThumbsField
+#from django_thumbs.db.models import ImageWithThumbsField
 import os
 
 
@@ -14,30 +14,30 @@ class Photo(models.Model):
     photo =models.ImageField(upload_to='photos')
     photo_thumbnail = ImageSpecField(
         source='photo',
-        processors=[SmartResize(550, 400)],
+        processors=[ResizeToFill(520, 323)],
         format='JPEG',
         options={'quality': 1000}
         )
 
     photo_thumbnail_home_view = ImageSpecField(
         source='photo',
-        processors=[SmartResize(290, 190)],
+        processors=[SmartResize(306, 207)],
         format='JPEG',
         options={'quality': 1000}
         )
     photo_thumbnail_pro_details = ImageSpecField(
         source='photo',
-        processors=[SmartResize(442, 300)],
+        processors=[ResizeToFill(750, 439)],
         format='JPEG',
         options={'quality': 1000}
         )
-    
+
 
 
 
     def __str__(self):
         return self.title
-    
+
 
     def image_img(self):
         if self.photo:
@@ -90,7 +90,7 @@ class Project(models.Model):
     preview_date = models.DateField()
     project_type = models.CharField(max_length=7, choices=PROJECT_TYPE)
     photos = models.ManyToManyField(Photo)
-    
+
     videos = models.ManyToManyField(Video_Link, blank=True)
     def __str__(self):
         return self.project_type
@@ -111,11 +111,24 @@ class About_detail(models.Model):
     photo = models.ImageField(upload_to='photos')
     about_photo_thumbnail = ImageSpecField(
         source='photo',
-        processors=[SmartResize(500, 500)],
+        processors=[SmartResize(950, 950)],
         format='JPEG',
         options={'quality': 100}
         )
-    
+
+    about_photo_thumbnail_1024 = ImageSpecField(
+        source='photo',
+        processors=[SmartResize(430, 450)],
+        format='JPEG',
+        options={'quality': 100}
+        )
+    about_photo_thumbnail_868 = ImageSpecField(
+        source='photo',
+        processors=[ResizeToFill(230, 450)],
+        format='JPEG',
+        options={'quality': 100}
+        )
+
 
     class Meta:
         verbose_name = "About_detail"
@@ -132,4 +145,3 @@ class Contact_info(models.Model):
     additional_1 = models.CharField(max_length=60, blank=True)
     additional_2 = models.CharField(max_length=60, blank=True)
 
-	
