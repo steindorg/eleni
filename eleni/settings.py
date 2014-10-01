@@ -78,7 +78,7 @@ DATABASES = {
         'USER': 'steindor',
         'PASSWORD': 'eleni',
         'HOST': 'mysql.server',
-        'CONN_MAX_AGE': 5,
+
     }
 }
 

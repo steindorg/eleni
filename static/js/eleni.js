@@ -1,14 +1,12 @@
 var base = {
-
+    /* init function is called on document ready*/
     init: function (){
-        /*mainp breytist i nav*/
+        /*disable animation on images on small screens*/
         if($(window).width()>801){
             base.img_fade();
             console.log($(window).width());
         }
-
-
-
+        /*asynchronous call on nav bar click*/
         $(".nav_div li").on('click',
             function ( e ) {
                 var wrap = $('#main_cat');
@@ -20,7 +18,7 @@ var base = {
 
             })
 
-
+    /*asynchronous call to home when clicking on Eleni podara*/
         $("#elenipro").on('click',
             function ( e ) {
                 var wrap = $('#main_cat');
@@ -30,57 +28,52 @@ var base = {
                 e.preventDefault();
 
             })
-
-
-
+    /*asynchronous call to project details when clicking on projects*/
         $("#main_cat").on('click', '#single_pro',
             function ( e ) {
                 var wrap_2 = $('#main_cat');
                 var href_2 = $(this).attr('href');
                 var title = $(this).attr('title');
+                /* display current navigation when choosing a project*/
                 if(title === "Theatre"){
-                    console.log(title + "ok this works");
                      $('#theatrepro').addClass('active');
                 }
                 if(title === "Film"){
-                    console.log(title + "ok this works");
                      $('#filmpro').addClass('active');
                 }
                 if(title === "Tv"){
-                    console.log(title + "ok this works");
                      $('#tvpro').addClass('active');
                 }
                 if(title === "Various"){
-                    console.log(title + "ok this works");
                      $('#variouspro').addClass('active');
                 }
                 if(title === "Contact"){
-                    console.log(title + "ok this works");
                      $('#contactpro').addClass('active');
                 }
                 if(title === "Links"){
-                    console.log(title + "ok this works");
                      $('#linkspro').addClass('active');
                 }
                 base.load_details(href_2, wrap_2);
-               e.preventDefault();
+                e.preventDefault();
             })
 
 
 
     },
-
+    /* Asynchronous load function for projects inside projet type*/
     load_project: function (href, wrap){
-        console.log("load project" + href);
+                                        /*img_fade is a function for
+                                        image animation*/
         wrap.load( href + ' .content', base.img_fade);
-
     },
-
+    /* Asynchronous load function for project details*/
     load_details: function (href, wrap){
-        console.log("load project details" + href);
+                                        /*slider is a function for
+                                        image slide show*/
         wrap.load( href + ' .content', base.slider);
     },
-
+    /* Animation function that changes the color of the image and displays the
+    title inside the image*/
     img_fade: function () {
             $('.content a .img').mouseenter(
             function () {
@@ -96,9 +89,8 @@ var base = {
             $(this).closest('.content_container').find('.h3').stop().fadeOut(100);
                 });
     },
-
+    /* Function that creates the slide show inside project details*/
     slider: function () {
-        console.log("test the slider if it starts");
         var present=1;
         var next=2;
         var total_slide=document.getElementById("slider").childElementCount;
@@ -154,7 +146,7 @@ var base = {
         })
     }
 };
-
+/*init function called on document ready*/
 $(document).ready(base.init);
 
 

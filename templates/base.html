@@ -10,13 +10,11 @@
 		<!--<link rel="ICON" href="favicon.ico" type="image/ico" />-->
 		<script src='/static/js/jquery-1.11.1.js' type="text/javascript"></script>
 		<link href='http://fonts.googleapis.com/css?family=Rajdhani:300' rel='stylesheet' type='text/css'>
-
-		<!--<script src='/static/js/eleni.js' type="text/javascript"/></script>-->
 	    <link href="/static/css/eleni.css" rel="stylesheet">
 
 	</head>
 
-	<body style="background-image:url('static/img/eleni_gray.jpg'); overflow-x:hidden">
+	<body style="background-image:url('static/img/eleni_gray.jpg'); overflow-x:hidden;">
 			    <div class="nav_div">
 				    <a class="navlink" id="elenipro" href="/home">  <img src="/static/img/eleni2.jpg" alt="Eleni Podara"> </a>
 				    <ul class="nav_link_set">
@@ -30,9 +28,10 @@
 				    </ul>
 			    </div>
                 <div id="main_cat">
-			        {% block project %} {% endblock %}
 
-				    {% block home %} {% endblock %}
+			        {% block home %} {% endblock %}
+
+			        {% block project %} {% endblock %}
 
 				    {% block project_details %} {% endblock %}
 
@@ -45,7 +44,5 @@
 
     <script src='/static/js/eleni.js' type="text/javascript"></script>
 	</body>
-
-
 
 </html>
